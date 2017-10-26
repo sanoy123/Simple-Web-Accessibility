@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .switcher-box {
+        width: 212px;
+        position: fixed;
+        left: -212px;
+        top: 160px;
+        text-align: center;
+        z-index: 99999999;
+        background-color: #fff;
+        border-radius: 0 0 2px 0;
+        border-radius: 0 5px 5px 0;
+        -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+}
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="switcher-box" style="left: -212px;">
+<a class="open-switcher show-switcher"><i class="fa fa-cog fa-2x"></i></a>
+<h4>Style Switcher</h4>
+<span>12 Predefined Color Skins</span>
+<ul class="colors-list">
+<li>
+<a href="javascript:chooseStyle('blue', 60)" title="Blue" class="blue"></a>
+</li>
+
+</ul>
+<span>Top Bar Color</span>
+<select id="topbar-style" class="topbar-style">
+<option value="1">Light (Default)</option>
+<option value="2">Dark</option>
+<option value="3">Color</option>
+</select>
+<span>Layout Style</span>
+<select id="layout-style" class="layout-style">
+<option value="1">Wide</option>
+<option value="2">Boxed</option>
+</select>
+<span>Patterns for Boxed Version</span>
+<ul class="bg-list">
+<li>
+<a href="#" class="bg1"></a>
+</li>
+</ul>
+</div>
+<!--http://demo.graygrids.com/themes/margo/-->
+  <script src="js/jquery.js"></script>
+<script>
+
+
+  $(document).ready(function(){
+    $('.open-switcher').click(function(){
+      if($(this).hasClass('show-switcher')){
+        $('.switcher-box').css({'left':0});
+        $('.open-switcher').removeClass('show-switcher');
+        $('.open-switcher').addClass('hide-switcher');
+      }else if(jQuery(this).hasClass('hide-switcher')){
+        $('.switcher-box').css({'left':'-212px'});
+        $('.open-switcher').removeClass('hide-switcher');
+        $('.open-switcher').addClass('show-switcher');
+      }
+    });
+  });
+
+
+</script>
+  </body>
+</html>

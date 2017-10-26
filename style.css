@@ -1,0 +1,87 @@
+.switcher-box {
+    width: 212px;
+    position: fixed;
+    left: -212px;
+    top: 160px;
+    text-align: center;
+    z-index: 99999999;
+    background-color: #fff;
+    border-radius: 0 0 2px 0;
+    border-radius: 0 5px 5px 0;
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.switcher-box .open-switcher {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 2px 2px 0;
+    background: #444 center no-repeat;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+.switcher-box h4 {
+    display: block;
+    height: 40px;
+    line-height: 42px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #333;
+    margin-bottom: 10px;
+}
+.switcher-box span {
+    display: block;
+    padding: 5px 20px;
+    text-align: left;
+}
+.switcher-box .topbar-style {
+    width: 172px;
+    padding: 6px 9px;
+    outline: none;
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 0 0 12px 20px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.06);
+    box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.06);
+}
+.switcher-box .layout-style, .switcher-box .topbar-style {
+    width: 172px;
+    padding: 6px 9px;
+    outline: none;
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 0 0 12px 20px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.06);
+    box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,0.06);
+}
+.switcher-box a {
+    cursor: pointer;
+}
+.switcher-box .open-switcher i {
+    text-align: center;
+    padding-top: 7px;
+}
