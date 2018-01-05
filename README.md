@@ -1,6 +1,6 @@
 # Simple Web Accessibility
 
-This a sample web accessibility
+This is a sample for web accessibility features
 The added features are:
 - High contrast vs Normal contrast
 - Yellow links vs Normal links
