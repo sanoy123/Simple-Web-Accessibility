@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>World Humanitarian Data and Trends 2017</title>
+  <link href="css/theme/bootstrap.css" rel="stylesheet">
+  <link href="css/theme/animate.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!-- Custom styles for data and trend 2017 template -->
+
+  <link href="css/interactive.css" rel="stylesheet">
+  <link href="css/base/style.css" rel="stylesheet">
+  <link href="css/layout/style.css" rel="stylesheet">
+  <link href="css/module/style.css" rel="stylesheet">
+  <link href="css/module/slider.css" rel="stylesheet">
+  <link href="css/state/style.css" rel="stylesheet">
+  <link href="css/theme/style.css" rel="stylesheet">
+
+  <link href="css/accessibility.css" rel="stylesheet" type="text/css">
+  <!-- Frappé charts -->
+  <script src="https://unpkg.com/frappe-charts@0.0.8/dist/frappe-charts.min.iife.js"></script>
+
+  <script src="js/jquery_1.9.1/jquery.min.js" charset="utf-8"></script>
+  <script src="js/jqueryui_1.12.1/jquery-ui.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97833370-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-97833370-7');
+</script>
+
+
+</head>
+
+<body id="body">
+  <div id="nav" class="data-trendsnavslideout">
+    <div class="wrapper">
+      <div class="data-trends-nav">
+        <a href="#introduction" class="data-trends-nav-introduction" data-localize="data-trends_nav_title">Introduction</a>
+        <a href="#decade-of-conflicts" data-localize="data-trends_nav_decade">A Decade of Conflicts</a>
+        <a href="#explosive-weapons" data-localize="data-trends_nav_explosive">Explosive Weapons</a>
+        <a href="#natural-disaster" data-localize="data-trends_nav_natural-disaster">Natural Disasters</a>
+        <a href="#rising-scope" data-localize="data-trends_nav_rising-scope">Funding tools</a>
+        <a href="#Resources" data-localize="data-trends_nav_resources">Resources</a>
+       
+      <div class="button-wrap"><button data-dialog="somedialog" class="trigger"><i class="fa fa-1x fa-wheelchair " aria-hidden="true"></i> Accessiblity</button></div>
+      
+      
+      <div id="somedialog" class="dialog dialog--close">
+        <div class="dialog__overlay"></div>
+        <div class="dialog__content">
+          <div class="morph-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 560 280" preserveAspectRatio="none">
+              <rect x="3" y="3" fill="none" width="556" height="276"></rect>
+            </svg>
+          </div>
+          <div class="dialog-inner">
+            <h2><strong>Accessibility </strong>options</h2>
+            <div>
+<!--
+              <button id="btnLargeFont"><i class="fa fa-text-height" aria-hidden="true" class="btn action"></i>&nbsp;&nbsp;large font</button>
+              <button id="btnSmallFont"><i class="fa fa-text-height" aria-hidden="true" class="btn action"></i>&nbsp;&nbsp;normal font</button>
+-->
+<div class="form-group">
+              <button id="btnHighContrast"><i class="fa fa-adjust" aria-hidden="true"></i>&nbsp;&nbsp;high contrast</button>
+              <button id="btnNormalContrast"><i class="fa fa-adjust" aria-hidden="true"></i>&nbsp;&nbsp;normal contrast</button>
+              </div><div class="form-group">
+              <button id="btnYellowLinks"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;yellow links</button>
+              <button id="btnNormalLinks"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;normal links</button>
+              </div>
+              <div class="form-group">
+              <button id="btnGreyScale"><i class="fa fa-barcode" aria-hidden="true"></i>&nbsp;&nbsp;grayscale mode</button>
+              <button id="btnRegularColor"><i class="fa fa-barcode" aria-hidden="true"></i>&nbsp;&nbsp;regular mode</button>
+              </div>
+              <div class="form-group">
+              <button id="btnUnderline"><i class="fa fa-underline" aria-hidden="true"></i>&nbsp;&nbsp;underline links</button>
+              <button id="btnDefault"><i class="fa fa-underline" aria-hidden="true"></i>&nbsp;&nbsp;default links</button>
+              </div>
+            </div>
+           
+            <div><button class="action" data-dialog-close="a">Close</button></div>
+          </div>
+        </div>
+      </div> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Jumbotron section  -->
+  <div class="hamburger" style='z-index:1000;'>
+    <span onclick="openNav()" class="openbtn">&larr; <strong>MENU: WHDT 2017</strong></span>
+  </div>
+
+  <div id="slideshow" class="slideshow">
+    <div class="slideshow">
+      <ul class="cb-slideshow">
+          <li><span>WHDT2017</span><div class="title-info"><div class="title-info-wrapper"><h1 class="main-text">WORLD <br>HUMANITARIAN <br>DATA AND TRENDS 2017</h1></div></div></li>
+          <li><span>WHDT2017</span><div class="title-info"><div class="title-info-wrapper"><h1 class="main-text">WORLD <br>HUMANITARIAN <br>DATA AND TRENDS 2017</h1></div></div></li>
+          <li><span>WHDT2017</span><div class="title-info"><div class="title-info-wrapper"><h1 class="main-text">WORLD <br>HUMANITARIAN <br>DATA AND TRENDS 2017</h1></div></div></li>
+          <li><span>WHDT2017</span><div class="title-info"><div class="title-info-wrapper"><h1 class="main-text">WORLD <br>HUMANITARIAN <br>DATA AND TRENDS 2017</h1></div></div></li>
+          <li><span>WHDT2017</span><div class="title-info"><div class="title-info-wrapper"><h1 class="main-text">WORLD <br>HUMANITARIAN <br>DATA AND TRENDS 2017</h1></div></div></li>
+         </ul>
+       </div>
+     </div>
+
+    <!-- INTRODUCTION section -->
+   <a id="introduction"></a>
+   <section id="introduction" class="container-fluid  content-section">
+     <div class="container-fluid">
+       <div class="row wow fadeInUp">
+         <div class="section-info">
+           <h1>INTRODUCTION</h1>
+              <img class="sectionicon" src="img/data.png">
+              <p>World Humanitarian Data and Trends (WHDT) 2017 highlights major trends in the nature of humanitarian crises, their causes and drivers. This year’s report includes case studies on Official Development Assistance in protracted crises, diversifying funding tools, hunger indicators, sexual and reproductive health in emergencies, aid worker security and 10-year trends in conflict.</p>
+
+            </div>
+          </div>
+
+
+          </section>
+
+     <section  class="wow slideInUp ">
+       <div class="big-photo" id="intro-photo">
+
+       </div>
+     </section>
+          <a id="decade-of-conflicts"></a>
+          <section id="violation-of-the-rules-of-war">
+            <div class="container">
+              <div class="wrapper">
+                <div class="section-info">
+                  <h1>A Decade of Conflicts</h1>
+                  <img class="sectionicon" src="img/icon-SSD-militarykids.png">
+                  <p>Armed conflicts have been a major cause of disruption across the humanitarian landscape in the last decade. Since 2006, the number of political conflicts worldwide has increased: in 2016, 402 conflicts were ongoing, compared with 278 in 2006.</p>
+                  <p>The number of people forcibly displaced by violence and conflict also increased to reach an unprecedented 65.6 million in 2016. Most of the world’s refugees came from Afghanistan, Somalia, South Sudan, Sudan and Syria. The global number of internally displaced persons (40.3 million) continued to be approximately double the number of refugees (22.5 million).</p>
+                  <p>Approximately <strong>97 per cent</strong> of humanitarian action, people in need and allocated resources were in complex emergencies.</p>
+                </div>
+                <div class="row">
+                </div>
+               </div>
+               <div class="distribution-map">
+                <img src="img/map.png">
+                <button class="map-point" style="top:31%;left:51%">
+                   <div class="content">
+                     <div class="centered-y">
+                      <div>
+                       <img src="img/europe.png" style="width: 600px; height: 600px; border-radius: 50%;">
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button class="map-point" style="top:53%;left:83%">
+                   <div class="content">
+                     <div class="centered-y">
+                       <div>
+                        <img src="img/asia_oceania.png" style="width: 600px; height: 600px; border-radius: 50%;">
+                       </div>
+                    </div>
+
+                   </div>
+               </button>
+
+                <button class="map-point" style="top:50%;left:29%">
+                   <div class="content">
+                      <div class="centered-y">
+                        <div>
+                         <img src="img/americas.png" style="width: 600px; height: 600px; border-radius: 50%;">
+                        </div>
+
+                      </div>
+                   </div>
+               </button>
+                <button class="map-point" style="top:60%;left:53%">
+                   <div class="content">
+                       <div class="centered-y">
+                         <div>
+                          <img src="img/ss_africa.png" style="width: 600px; height: 600px; border-radius: 50%;">
+                         </div>
+
+                       </div>
+                   </div>
+               </button>
+                <button class="map-point" style="top:47%;left:56%">
+                   <div class="content">
+                       <div class="centered-y">
+                         <div>
+                          <img src="img/middeast_maghreb.png" style="width: 600px; height: 600px; border-radius: 50%;">
+                         </div>
+
+                       </div>
+                   </div>
+               </button>
+              </div>
+
+
+            </div>
+
+          </section>
+
+
+          <section id="violation-of-the-rules-of-war-mobile">
+            <div class="container">
+              <div class="wrapper">
+                <div class="section-info">
+                  <h1>A Decade of Conflicts</h1>
+                  <img class="sectionicon" src="img/icon-SSD-militarykids.png">
+                  <p>Armed conflicts have been a major cause of disruption across the humanitarian landscape in the last decade. Since 2006, the number of political conflicts worldwide has increased: in 2016, 402 conflicts were ongoing, compared with 278 in 2006.</p>
+                  <p>The number of people forcibly displaced by violence and conflict also increased to reach an unprecedented 65.6 million in 2016. Most of the world’s refugees came from Afghanistan, Somalia, South Sudan, Sudan and Syria. The global number of internally displaced persons (40.3 million) continued to be approximately double the number of refugees (22.5 million).</p>
+                  <p>Approximately 97 per cent of humanitarian action, people in need and allocated resources were in complex emergencies.</p>
+                </div>
+              </div>
+              <h2>Asia and Oceania</h2>
+              <img src="img/asia_oceania.png" class="img-responsive" style="width: 100%; height:auto;">
+              <h2>Europe</h2>
+              <img src="img/europe.png" class="img-responsive" style="width: 100%; height:auto;">
+              <h2>Middle East and Maghreb</h2>
+              <img src="img/middeast_maghreb.png" class="img-responsive" style="width: 100%; height:auto;">
+              <h2>Sub-Saharan Africa</h2>
+              <img src="img/ss_africa.png" class="img-responsive" style="width: 100%; height:auto;">
+              <h2>The Americas</h2>
+              <img src="img/americas.png" class="img-responsive" style="width: 100%; height:auto;">
+
+            </div>
+          </section>
+
+
+          <!-- A Decade of Conflict section -->
+
+          <section id="decade-of-conflicts" class="wow slideInUp ">
+            <div class="big-photo" id="situation-photo">
+
+
+            </div>
+          </section>
+
+
+          <a id="explosive-weapons"></a>
+          <section id="why" class="container wow slideInUp content-section">
+            <div class="wrapper">
+              <div class="section-info">
+                <h1>EXPLOSIVE WEAPONS<br>HEAVILY IMPACT CIVILIAN POPULATIONS</h1>
+                <img class="sectionicon" src="img/ewipa.png">
+                <p>Many armed conflicts take place in urban areas, often with a devastating impact on civilians. High population density and the close proximity of civilians and civilian objects to military objectives greatly increase the risk of civilian death, injury and displacement, in addition to damage to critical infrastructure, the disruption of essential services, and the loss of access to education and livelihoods. In 2016, 70 per cent of deaths and injuries resulting from explosive weapons were civilian. In populated areas, this figure was even higher: 92 per cent.</p>
+                <p>The use of explosive weapons also results in explosive remnants of war (ERW), which pose a continuing lethal threat to civilians, and a major obstacle to reconstruction and the return of displaced persons. In 2016, 86 per cent of deaths and injuries from mines and ERW were civilian, but with a disproportionate impact on the male population: 47 per cent of casualties were men and 32 per cent were boys.</p>
+              </div>
+            </div>
+        </section>
+          <div class="big-photo" id="disaproportionate-photo">
+
+
+
+          </div>
+
+
+          <a id="natural-disaster"></a>
+          <section id="why" class="container wow slideInUp content-section">
+            <div class="wrapper">
+              <div class="row">
+                <div class="section-info">
+                  <h1>THE WORSENING IMPACT OF NATURAL DISASTERS</h1>
+                  <img class="sectionicon" src="img/climate.png">
+                  <p>Climate change, conflict and urbanization, among other forces, are increasing vulnerability and exacerbating the impact and intensity of natural disasters. While the number of natural disasters decreased in 2016 compared with 2015, the number of people affected doubled, from 102 million in 2015 to 204 million in 2016. The total damage also increased from US$90 billion in 2015 to $147 billion in 2016.</p>
+
+
+
+               </div>
+              </div>
+            <div class="row">
+              <div class="wraper-figure">
+             <div class="container">
+
+               <div class="row">
+
+
+                 <div class="col-md-6 col-sm-6 col-xs-6" style="position: relative;height: 380px;">
+                   <div class="figure-comparison" style="position: absolute; bottom: 0; text-align:center; width: 100%;">
+                    <h1 class="country-figure"><strong>2015</strong></h1>
+                    <img src="img/person.JPG" style="width: 180px; height:auto;">
+                    <div class="col-md-12 col-sm-12 natural">
+                        <h3>People affected</h3>
+                        <p class="figure"><span class="big-number decimal-figure">102 </span><span class="visible">MILLION</p>
+                        <h3>Damage Cost (US$)</h3>
+                        <p class="figure"><span class="big-number decimal-figure">$90 </span><span class="visible">BILLION</p>
+                    </div>
+                   </div>
+                 </div>
+                 <div class="col-md-6 col-sm-6 col-xs-6" style="position: relative;height: 380px;">
+                   <div class="figure-comparison" style="position: absolute; bottom: 0; text-align:center">
+                     <h1 class="country-figure"><strong>2016</strong></h1>
+                    <img src="img/person.JPG" style="width: 280px; height:auto;">
+
+                    <div class="col-md-12 col-sm-12 natural">
+                        <h3>People affected</h3>
+                        <p class="figure"><span class="big-number decimal-figure">204</span><span class="visible">MILLION</p>
+                        <h3>Damage Cost (US$)</h3>
+
+                        <p class="figure"><span class="big-number decimal-figure">$147</span><span class="visible">BILLION</p>
+                    </div>
+                   </div>
+
+               </div>
+
+               </div>
+
+
+             </div>
+           </div>
+           </div>
+            </div>
+        </section>
+        <div class="big-photo" id="natural-disaster-photo">
+
+
+
+        </div>
+
+
+        <a id="rising-scope"></a>
+        <section id="why" class="container wow slideInUp content-section">
+          <div class="wrapper">
+            <div class="container">
+              <div class="row">
+                  <div class="section-info">
+                    <h1>DIVERSIFYING FUNDING TOOLS</h1>
+                    <img class="sectionicon" src="img/funding.png">
+                    <p>Humanitarian actors take many forms: international staff, national Governments, religious leaders and digital volunteers, among others. Local organizations often are the first responders, especially in situations where there is no formal coordinated international response. Yet current international funding mechanisms are not always available to fund these local actors or build their capacities. Humanitarians are working to provide more effective aid and flexible funding to all types of crises.</p>
+                    <p>One example is the Start Fund—the first multi-donor pooled fund managed by NGOs. It fills the funding gap by providing grants to its members within 72 hours of a response activation. The goal is to respond to emergencies that may not receive the same level of funding or attention as large-scale or protracted crises. In 2016, the Start Fund provided $13.1 million to support 41 responses to crises in 32 countries. Seventy-eight per cent of responses involved implementation with one or more local or national NGO partners.</p>
+                  </div>
+             </div>
+
+             <div class="row">
+               <div class="col-md-3 col-sm-12 natural">
+                 <h3><strong>Zambia</strong></h3>
+                 <div class="media">
+                    <div class="media-left">
+                        <img src="img/draught-01.svg" style="width: 100px; height:auto;">
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading header-date">22 Mar 2016</h2>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                  <h1 class="country-figure" style="font-size: 50px">$156,200</h1>
+                </div>
+
+
+
+
+               </div>
+               <div class="col-md-3 col-sm-12 natural">
+                 <h3><strong>Ecuador</strong></h3>
+
+                 <div class="media">
+                    <div class="media-left">
+                        <img src="img/earthquake-01.svg" style="width: 100px; height:auto;">
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading  header-date">27 Apr 2016</h2>
+                    </div>
+                 </div>
+                 <div style="width: 100%;">
+                  <h1 class="country-figure">$765,421</h1>
+                 </div>
+
+
+               </div>
+               <div class="col-md-3 col-sm-12 natural">
+                 <h3><strong>Indonesia</strong></h3>
+                 <div class="media">
+                    <div class="media-left">
+                        <img src="img/draught-01.svg" style="width: 100px; height:auto;">
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading header-date">15 Mar 2016</h2>
+                    </div>
+                 </div>
+                 <div style="width: 100%;">
+                  <h1 class="country-figure" style="font-size: 50px">$725,460</h1>
+                 </div>
+
+
+               </div>
+               <div class="col-md-3 col-sm-12 natural">
+                 <h3><strong>Malawi</strong></h3>
+                 <div class="media">
+                    <div class="media-left">
+                        <img src="img/refugee.png" style="width: 100px; height:auto;">
+                    </div>
+                    <div class="media-body">
+                      <h2 class="media-heading header-date">12 Apr 2016</h2>
+                    </div>
+                 </div>
+                 <div style="width: 100%;">
+                  <h1 class="country-figure" style="font-size: 50px">$312,400</h1>
+                 </div>
+
+               </div>
+             </div>
+             <div class="row">
+
+             </div>
+             <div class="row">
+               <div class="container">
+               <p class="sources" data-localize="funding_sources">
+  <img src="img/draught-01.svg" style="width: 90px; height:auto;"> DROUGHT
+  <img src="img/earthquake-01.svg" style="width: 90px; height:auto;"> EARTHQUAKE
+  <!--<img src="img/Cyclone-01.svg" style="width: 90px; height:auto;"> CYCLONE -->
+  <!--<img src="img/Floods.svg" style="width: 90px; height:auto;"> FLOOD -->
+    <img src="img/refugee.png" style="width: 90px; height:auto;"> REFUGEE
+               </p>
+             </div>
+             </div>
+
+            </div>
+          </div>
+      </section>
+      <div class="big-photo" id="rising-scope-photo">
+
+
+
+      </div>
+
+
+          <a id="Resources"></a>
+          <section id="Resources" class=" wow slideInUp content-section">
+            <div class="wrapper">
+              <div class="container">
+                <div class="row">
+                  <div class="section-info">
+                    <h1>Resources</h1>
+                    <img src="https://www.unocha.org/sites/unocha/files/update.png">
+                    <p>World Humanitarian Data and Trends is just one part of OCHA's efforts to improve data and analysis on humanitarian situations worldwide and build a humanitarian data community.</p>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      <p><a href="resources/WHDT2017_Final_Singles.pdf" target="_blank" class="button lightred-bk readbutton readbutton-bottom">Read the Report (PDF)</a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      <p><a href="http://online.fliphtml5.com/srhi/srmz/" target="_blank" class="button lightred-bk readbutton readbutton-bottom">Read the Report (Interactive)</a></p>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+
+                  <div class="col-md-2 col-sm-4 col-xs-4 infobox">
+                    <h2>Highlights</h2>
+                    <ul>
+                      <li><i class="fa fa-download" aria-hidden="true"></i> <a href="resources/WHDT_2017 Highlights.pdf" target="_blank">Download</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-4 infobox">
+                    <h2>Global Landscape</h2>
+                    <ul>
+                      <li><i class="fa fa-download" aria-hidden="true"></i> <a href="resources/WHDT2017_Global Landscape_final.pdf" target="_blank">Download</a></li>
+                    </ul>
+                  </div>
+
+
+                  <div class="col-md-2 col-sm-4 col-xs-4 infobox">
+                    <h2>Data</h2>
+                    <ul>
+                      <li><i class="fa fa-download" aria-hidden="true"></i> <a href="https://data.humdata.org/dataset/world-humanitarian-data-and-trends" target="_blank">Download</a></li>
+                    </ul>
+                  </div>
+
+
+                  <div class="col-md-2 col-sm-4 col-xs-4 infobox">
+                    <h2>Visuals</h2>
+                    <ul>
+                      <li><i class="fa fa-download" aria-hidden="true"></i> <a href="resources/visuals.zip" target="_blank">Download</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-3  col-sm-4 col-xs-4 past">
+                    <h2>Past Reports</h2>
+                      <i class="fa fa-download" aria-hidden="true"></i> <a href="http://interactive.unocha.org/publication/2016_datatrends/WHDT2016.pdf" target="_blank">2016</a>, <a href="http://www.unocha.org/sites/unocha/files/WHDT2015.pdf" target="_blank">2015</a>,
+                    <a href="http://interactive.unocha.org/publication/2014_datatrends/downloads/World%20Humanitarian%20Data%20and%20Trends%202014.pdf" target="_blank">2014</a>, <a href="https://docs.unocha.org/sites/dms/Documents/WHDT_2013%20WEB.pdf" target="_blank">2013</a>, <a href="https://docs.unocha.org/sites/dms/Documents/World%20Humanitarian%20Data%20and%20Trends%202012%20Web.pdf"
+                      target="_blank">2012</a><br>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer id="contact">
+            <div class="wrapper">
+              <div style="max-width:280px; margin:0 auto; text-align:center; float:none;">
+                <div class="social-icons share-buttons">
+                  <a class="twitter" href="https://twitter.com/ochapolicy" data-show-count="false" target="_blank"></a>
+               </div>
+              </div>
+              <h2 data-localize="footer_text" style="clear:both; text-align:center">The information gap</h2>
+              <p data-localize="footer_disclaimer">Due to the complexity of humanitarian crises, there are many gaps in the available information. Even the concepts of humanitarian needs and assistance are flexible, and there are inherent biases in the information. To truly understand and
+                measure impact, the humanitarian community will need to continue working on better standards and ways of collecting, sharing and using data.</p>
+
+              <p>WHDT is structured in accordance with the Agenda for Humanity’s five Core Responsibilities, which set out changes needed to reduce need, risk and vulnerability. To learn more, visit <a href="https://www.agendaforhumanity.org" target="_blank">www.agendaforhumanity.org</a>.</p>
+              <div style="max-width:280px; margin:0 auto; text-align:center; float:none;">
+              <a href="https://www.unocha.org" target="_blank"><img src="img/logo-ocha.png" style="width: 109px;height: 27px;"></a>
+            </div>
+          </footer>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+          <script>
+            function openNav() {
+              $('#nav').css('width', '250px');
+              $('#main').css('margin-left', '250px');
+              $('.openbtn').html('&times;');
+              $('.openbtn').attr('onclick', 'closeNav()');
+              $('.data-trends-nav').css('padding', '30px');
+              $('.data-trends-nav a').css('opacity', '1');
+              $('.mobile-logo').css('display', 'none');
+            }
+
+            function closeNav() {
+              $('#nav').css('width', '0px');
+              $('#main').css('margin-left', '0px');
+              $('.openbtn').html('&larr; <strong>MENU: WORLD HUMANITARIAN DATA AND TRENDS 2017</strong>');
+              $('.openbtn').attr('onclick', 'openNav()');
+              $('.data-trends-nav').css('padding', '0px');
+              $('.data-trends-nav a').css('opacity', '0');
+              $('.mobile-logo').css('display', 'inline');
+            }
+
+         </script>
+          <script src="js/scrolling.js" id="scrolling-js"></script>
+          <script>
+            
+            /*
+            document.getElementById('btnSmallFont').addEventListener('click', function (){
+              var multiplier=2;
+              if (document.body.style.fontSize == "") {
+                    document.body.style.fontSize = "1.0em";
+                }
+              document.getElementById('body').style.fontSize =  parseFloat(document.body.style.fontSize) - (multiplier * 0.2) + "em";
+            });
+            */
+            document.getElementById('btnHighContrast').addEventListener('click', function(){
+              document.getElementById('body').style.cssText = '  filter: invert(100%) !important;';
+              $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: "css/high-contrast.css",
+                    title: "underline"
+                }).appendTo("head");
+               
+               
+            });
+    
+           document.getElementById('btnNormalContrast').addEventListener('click', function(){
+            $("LINK[href*='css/high-contrast.css']").remove();
+            document.getElementById('body').style.cssText = '  filter: invert(0%) !important;';
+           });
+    
+           document.getElementById('btnYellowLinks').addEventListener('click', function(){
+            $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: "css/yellow-links.css",
+                    title: "underline"
+                }).appendTo("head");
+           });
+           document.getElementById('btnNormalLinks').addEventListener('click', function(){
+            $("LINK[href*='css/yellow-links.css']").remove();
+           });
+           document.getElementById('btnUnderline').addEventListener('click', function(){
+            $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: "css/underline-links.css",
+                    title: "underline"
+                }).appendTo("head");
+           });
+           document.getElementById('btnDefault').addEventListener('click', function(){
+            $("LINK[href*='css/underline-links.css']").remove();
+           });
+           document.getElementById('btnGreyScale').addEventListener('click', function(){
+            document.getElementById('body').style.cssText = '  -webkit-filter: grayscale(100%); filter: grayscale(100%);';
+           });
+           document.getElementById('btnRegularColor').addEventListener('click', function(){
+            document.getElementById('body').style.cssText = '  -webkit-filter: grayscale(0%); filter: grayscale(0%);';
+           });
+
+        
+        </script>
+        <script src="js/bootstrap.js"></script>
+      
+        <script src='https://tympanus.net/Development/DialogEffects/js/modernizr.custom.js'></script>
+        <script src='https://tympanus.net/Development/DialogEffects/js/classie.js'></script>
+        <script src="js/accessibility.js"></script>
+        
+</body>
+
+</html>
