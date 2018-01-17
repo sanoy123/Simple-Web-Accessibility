@@ -20,16 +20,17 @@ var cacheFiles = [
   './strip.css',
   './underline-links.css',
   './yellow-links.css',
+  './js/modernizr.custom.js',
+  './js/classie.js',
+  './js/accessibility.js',
+  './js/jquery_1.9.1/jquery.min.js',
+  './js/jqueryui_1.12.1/jquery-ui.min.js',
   'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
   'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese',
   'https://fonts.googleapis.com/css?family=Lato',
   'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css',
   'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-  './js/modernizr.custom.js',
-  './js/classie.js',
-  './js/accessibility.js',
-  './js/jquery_1.9.1/jquery.min.js',
-  './js/jqueryui_1.12.1/jquery-ui.min.js'
+
 
 ];
 
@@ -45,20 +46,21 @@ self.addEventListener('install', function(e) {
 	);
 });
 
-self.addEventListener('activate', function(e) {
-    console.log('[ServiceWorker] Activated');
-
-    e.waitUntil(
-		caches.keys().then(function(cacheNames) {
-			return Promise.all(cacheNames.map(function(thisCacheName) {
-				if (thisCacheName !== cacheName) {
-					console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
-					return caches.delete(thisCacheName);
-				}
-			}));
-		})
-	);
-
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    // Get all the cache names
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        // Get all the items that are stored under a different cache name than the current one
+        cacheNames.filter(function(cacheName) {
+          return cacheName != currentCacheName;
+        }).map(function(cacheName) {
+          // Delete the items
+          return caches.delete(cacheName);
+        })
+      ); // end Promise.all()
+    }) // end caches.keys()
+  ); // end event.waitUntil()
 });
 
 
