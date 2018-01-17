@@ -37,25 +37,7 @@
   gtag('config', 'UA-97833370-7');
 </script>
 
-<script>
-
-
-  if ('serviceWorker' in navigator) {
-
-  navigator.serviceWorker
-    .register('sw.js', { scoep: './'})
-    .then(function(registration) {
-      console.log("Service Worker Registered");
-    })
-    .catch(function(err) {
-      console.log("Service Worker Failed to Register", err);
-    })
-
-}
-
-
-
-</script>
+ <script src="js/app.js"></script>
 </head>
 
 <body id="body">
