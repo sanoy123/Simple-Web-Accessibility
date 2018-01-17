@@ -1,7 +1,6 @@
 var cacheName = 'v2';
 
 var cacheFiles = [
-  './',
   './index.html',
   './css/base/style.css',
   './css/layout/style.css',
