@@ -29,7 +29,7 @@ var cacheFiles = [
   './js/classie.js',
   './js/accessibility.js',
   './js/jquery_1.9.1/jquery.min.js',
-  'js/jqueryui_1.12.1/jquery-ui.min.js'
+  './js/jqueryui_1.12.1/jquery-ui.min.js'
 
 ]
 
