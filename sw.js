@@ -24,7 +24,6 @@ var cacheFiles = [
   'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese',
   'https://fonts.googleapis.com/css?family=Lato',
   'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css',
-  
   'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
   './js/modernizr.custom.js',
   './js/classie.js',
