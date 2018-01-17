@@ -1,29 +1,29 @@
 var cacheName = 'v1';
 var cacheFiles = [
-  '/',
-  '/index.html',
-  '/css/base/style.css',
-  '/css/layout/style.css',
-  '/css/module/style.css',
-  '/css/state/style.css',
-  '/theme/animate.css',
-  '/theme/bootstrap.css',
-  '/theme/font-awesome.css',
-  '/theme/style.css',
-  '/accessibility.css',
-  '/bootstrap.css',
-  '/c3.css',
-  '/high-contrast.css',
-  '/interactive.css',
-  '/slick.css',
-  '/strip.css',
-  '/underline-links.css',
-  '/yellow-links.css',
-  '/js/modernizr.custom.js',
-  '/js/classie.js',
-  '/js/accessibility.js',
-  '/js/jquery_1.9.1/jquery.min.js',
-  '/js/jqueryui_1.12.1/jquery-ui.min.js',
+  './',
+  './index.html',
+  './css/base/style.css',
+  './css/layout/style.css',
+  './css/module/style.css',
+  './css/state/style.css',
+  './theme/animate.css',
+  './theme/bootstrap.css',
+  './theme/font-awesome.css',
+  './theme/style.css',
+  './accessibility.css',
+  './bootstrap.css',
+  './c3.css',
+  './high-contrast.css',
+  './interactive.css',
+  './slick.css',
+  './strip.css',
+  './underline-links.css',
+  './yellow-links.css',
+  './js/modernizr.custom.js',
+  './js/classie.js',
+  './js/accessibility.js',
+  './js/jquery_1.9.1/jquery.min.js',
+  './js/jqueryui_1.12.1/jquery-ui.min.js',
   'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
   'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese',
   'https://fonts.googleapis.com/css?family=Lato',
@@ -32,10 +32,9 @@ var cacheFiles = [
 ];
 
 
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function(event) {
     console.log('[ServiceWorker] Installed');
-    e.waitUntil(
-
+    event.waitUntil(
 	    caches.open(cacheName).then(function(cache) {
 			console.log('[ServiceWorker] Caching cacheFiles');
 			return cache.addAll(cacheFiles);
