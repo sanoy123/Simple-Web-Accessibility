@@ -31,7 +31,7 @@ var cacheFiles = [
   './js/jquery_1.9.1/jquery.min.js',
   './js/jqueryui_1.12.1/jquery-ui.min.js'
 
-]
+];
 
 
 self.addEventListener('install', function(e) {
