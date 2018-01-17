@@ -1,5 +1,4 @@
 var cacheName = 'v2';
-
 var cacheFiles = [
   '/',
   '/index.html',
@@ -45,12 +44,14 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener('activate', function(event) {
+  console.log('[ServiceWorker] Activated');
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
+        cacheNames.map(function(thisCacheName) {
+          if (thisCacheName !== cacheName) {
+            console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
+            return caches.delete(thisCacheName);
           }
         })
       );
@@ -59,6 +60,7 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  console.log('[ServiceWorker] Fetch', event.request.url);
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
